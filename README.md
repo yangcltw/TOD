@@ -31,11 +31,19 @@ There are full process for agile development. For every project cycle, we have
 ***
 We don't have jira or any other tools for help right now. I'm going to create stories and subtasks below to plan this project and show the progress by updating by comment or ().
 ***
-# Stories 
+# Stories for MVP version
 > There are two stories for the requirements from PO, each story is represent two UI screens accordingly.
 * As a user, I can see attractions in the parks so that I can know what attractions Taipei parks have.
+  * read document of taipei open data
+  * find json parser
+  * create storyboard for this page
+  * create custom cell view for the table cell
+  * define data model for json
+  * 
 * As a user, I can see the list of attractions in the park so that I can go to visit the spot in the park.
 
+# Stories for enhancement
+> query pagenation and lazy loading. debouncy for refresh. data cache.
 ***
 not finish yet.
 
