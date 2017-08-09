@@ -34,16 +34,15 @@ We don't have jira or any other tools for help right now. I'm going to create st
 # Stories for MVP version
 > There are two stories for the requirements from PO, each story is represent two UI screens accordingly.
 * As a user, I can see attractions in the parks so that I can know what attractions Taipei parks have.
-  * read document of taipei open data (In progress at 2017/8/9)
-  * find 3rd party json parser
-  * create iOS project
-  * create storyboard for this page (consider support device and x1, x2, x3. i18n support)
-  * create custom cell view for the table cell
-  * define data model for json
-  * get data by http request
-  * import 3rd party library and parse data
-  * bind data to table view
-  * testing
+  * TOD-1 read document of taipei open data (Closed at 2017/8/9)
+  * TOD-2 create iOS project
+  * TOD-3 define data model for json
+  * TOD-4 build http request and get data by http request
+  * TOD-5 find 3rd party json parser
+  * TOD-6 import 3rd party library and parse data
+  * TOD-7 create storyboard for this page (consider support device and x1, x2, x3. i18n support)
+  * TOD-8 create custom table cell view
+  * TOD-9 bind data to table view
 * As a user, I can see the list of attractions in the park so that I can go to visit the spot in the park.
 
 # Stories for enhancement
