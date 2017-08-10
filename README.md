@@ -35,8 +35,8 @@ We don't have jira or any other tools for help right now. I'm going to create st
 > There are two stories for the requirements from PO, each story is represent two UI screens accordingly.
 * As a user, I can see attractions in the parks so that I can know what attractions Taipei parks have.
   * TOD-0 read document of taipei open data (Closed at 2017/8/9)
-  * TOD-1 create iOS project (pull request at 2017/8/9)
-  * TOD-2 define data model for json
+  * TOD-1 create iOS project (closed ata 2017/8/10)
+  * TOD-2 define data model for json (In progress) https://github.com/jsonmodel/jsonmodel
   * TOD-3 build http request and get data by http request
   * TOD-4 find 3rd party json parser
   * TOD-5 import 3rd party library and parse data
