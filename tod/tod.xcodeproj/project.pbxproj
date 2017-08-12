@@ -64,6 +64,7 @@
 		CCEAD6F31F3B566C0018404E /* todUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CCEAD6F71F3B566C0018404E /* todUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = todUITests.m; sourceTree = "<group>"; };
 		CCEAD6F91F3B566C0018404E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CCEAD7061F3F52B60018404E /* TodModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodModel.h; sourceTree = "<group>"; };
 		D614DE96C126B69C270A058E /* Pods-todUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-todUITests/Pods-todUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,6 +144,7 @@
 		CCEAD6CE1F3B566C0018404E /* tod */ = {
 			isa = PBXGroup;
 			children = (
+				CCEAD7051F3F51370018404E /* Models */,
 				CCEAD6D21F3B566C0018404E /* AppDelegate.h */,
 				CCEAD6D31F3B566C0018404E /* AppDelegate.m */,
 				CCEAD6D51F3B566C0018404E /* ViewController.h */,
@@ -181,6 +183,14 @@
 				CCEAD6F91F3B566C0018404E /* Info.plist */,
 			);
 			path = todUITests;
+			sourceTree = "<group>";
+		};
+		CCEAD7051F3F51370018404E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CCEAD7061F3F52B60018404E /* TodModel.h */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
