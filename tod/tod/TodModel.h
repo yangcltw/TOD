@@ -8,7 +8,9 @@
 
 #ifndef TodModel_h
 #define TodModel_h
+
 @import JSONModel;
+
 
 @protocol ResultModel;
 @protocol AttractionsModel;
