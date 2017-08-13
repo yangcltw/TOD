@@ -34,6 +34,8 @@
 		CCEAD7331F4024690018404E /* TodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD7321F4024690018404E /* TodModel.m */; };
 		CCEAD7341F4024690018404E /* TodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD7321F4024690018404E /* TodModel.m */; };
 		CCEAD7351F4024690018404E /* TodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD7321F4024690018404E /* TodModel.m */; };
+		CCEAD73C1F40539D0018404E /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD73B1F40539D0018404E /* AttractionCell.m */; };
+		CCEAD73F1F40A60A0018404E /* default.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CCEAD73E1F40A60A0018404E /* default.JPG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,12 @@
 		CCEAD72D1F3FFA590018404E /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		CCEAD72E1F3FFA830018404E /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
 		CCEAD7321F4024690018404E /* TodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodModel.m; sourceTree = "<group>"; };
+		CCEAD7371F4035710018404E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		CCEAD7381F403A540018404E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		CCEAD7391F403A540018404E /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		CCEAD73A1F40539D0018404E /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
+		CCEAD73B1F40539D0018404E /* AttractionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionCell.m; sourceTree = "<group>"; };
+		CCEAD73E1F40A60A0018404E /* default.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default.JPG; path = ../../../../Users/bart/Downloads/default.JPG; sourceTree = "<group>"; };
 		D0179C989339EEF284F9B4D0 /* Pods_tod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D614DE96C126B69C270A058E /* Pods-todUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-todUITests/Pods-todUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +176,7 @@
 		CCEAD6CE1F3B566C0018404E /* tod */ = {
 			isa = PBXGroup;
 			children = (
+				CCEAD73D1F40A5E60018404E /* Resources */,
 				CCEAD70D1F3F60520018404E /* Constants */,
 				CCEAD7071F3F5EFB0018404E /* Utilities */,
 				CCEAD7051F3F51370018404E /* Models */,
@@ -181,6 +190,8 @@
 				CCEAD6E31F3B566C0018404E /* Info.plist */,
 				CCEAD6DB1F3B566C0018404E /* tod.xcdatamodeld */,
 				CCEAD6CF1F3B566C0018404E /* Supporting Files */,
+				CCEAD73A1F40539D0018404E /* AttractionCell.h */,
+				CCEAD73B1F40539D0018404E /* AttractionCell.m */,
 			);
 			path = tod;
 			sourceTree = "<group>";
@@ -240,6 +251,14 @@
 				CCEAD7241F3F62260018404E /* NetworkConstants.m */,
 			);
 			name = Constants;
+			sourceTree = "<group>";
+		};
+		CCEAD73D1F40A5E60018404E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CCEAD73E1F40A60A0018404E /* default.JPG */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +379,7 @@
 				CCEAD6E21F3B566C0018404E /* LaunchScreen.storyboard in Resources */,
 				CCEAD6DF1F3B566C0018404E /* Assets.xcassets in Resources */,
 				CCEAD6DA1F3B566C0018404E /* Main.storyboard in Resources */,
+				CCEAD73F1F40A60A0018404E /* default.JPG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,10 +507,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-tod/Pods-tod-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/JSONModel/JSONModel.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSONModel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -534,6 +556,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCEAD73C1F40539D0018404E /* AttractionCell.m in Sources */,
 				CCEAD7251F3F62260018404E /* NetworkConstants.m in Sources */,
 				CCEAD6D71F3B566C0018404E /* ViewController.m in Sources */,
 				CCEAD7331F4024690018404E /* TodModel.m in Sources */,
@@ -592,6 +615,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				CCEAD6D91F3B566C0018404E /* Base */,
+				CCEAD7371F4035710018404E /* en */,
+				CCEAD7381F403A540018404E /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -600,6 +625,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				CCEAD6E11F3B566C0018404E /* Base */,
+				CCEAD7391F403A540018404E /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -611,6 +637,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -660,6 +687,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

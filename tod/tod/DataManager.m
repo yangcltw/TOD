@@ -25,7 +25,7 @@
     return instance;
 }
 
-- (void) retreiveDataFromServer {
+- (void) retreiveDataFromServer:(void(^)())completeBlock {
     
     HttpUrl *httpUrl = [[HttpUrl alloc] init];
     [httpUrl buildUrl:RequestProtocal baseUrl:RequestBaseUrl path:RequestPath];
@@ -43,7 +43,10 @@
         NSError *err;
         id jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&err];
         attractions = [[TodModel alloc] initWithDictionary:jsonDict error:&err];
-
+        [self processModels];
+        if (completeBlock) {
+            completeBlock();
+        }
 
     } failure:^(NSData *data, NSError *error) {
         //TODO
@@ -51,8 +54,24 @@
     
 }
 
-- (TodModel*) getTodData {
-    return attractions;
+- (void) processModels {
+    attractionsDic = [[NSMutableDictionary alloc]init];
+    NSArray <AttractionsModel> *results = attractions.result.results;
+    for (AttractionsModel* attraction in results) {
+        NSMutableArray <AttractionsModel> *parks = [attractionsDic objectForKey:attraction.ParkName];
+        if (parks == nil) {
+            NSMutableArray <AttractionsModel> *array = [[NSMutableArray alloc] init];
+            [array insertObject:attraction atIndex:0];
+            [attractionsDic setValue:array forKey:attraction.ParkName];
+        } else {
+            [parks addObject:attraction];
+        }
+    }
+    //NSLog(@"data processing");
+    
+}
+- (NSMutableDictionary*) getTodData {
+    return attractionsDic;
 }
 
 @end
