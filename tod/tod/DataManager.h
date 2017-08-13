@@ -12,10 +12,11 @@
 
 @interface DataManager : NSObject {
     TodModel *attractions;
+    NSMutableDictionary *attractionsDic;
 }
 + (instancetype) sharedInstance;
-- (void) retreiveDataFromServer;
-- (TodModel*) getTodData;
+- (void) retreiveDataFromServer:(void(^)())completeBlock;
+- (NSMutableDictionary*) getTodData;
 // TODO : local storage
 @end
 #endif /* DataManager_h */
