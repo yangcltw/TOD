@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "DataManager.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    DataManager *manager = [DataManager sharedInstance];
+    [manager retreiveDataFromServer];
+    //HttpRequest *http = [[HttpRequest alloc] init];
+    //[http getTodData];
     // Override point for customization after application launch.
     return YES;
 }
