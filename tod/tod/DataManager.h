@@ -15,6 +15,7 @@
 }
 + (instancetype) sharedInstance;
 - (void) retreiveDataFromServer;
+- (TodModel*) getTodData;
 // TODO : local storage
 @end
 #endif /* DataManager_h */

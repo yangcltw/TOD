@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@import JSONModel;
 #import "DataManager.h"
 #import "HttpUrl.h"
 #import "HttpRequest.h"
 #import "NetworkConstants.h"
+
 
 @implementation DataManager
 
@@ -38,15 +40,19 @@
     
     
     [HttpRequest getTodData:httpUrl success:^(NSData *data) {
-        // TODO
-        NSLog(@"Get data");
-        NSString *myString = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(myString);
+        NSError *err;
+        id jsonDict = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&err];
+        attractions = [[TodModel alloc] initWithDictionary:jsonDict error:&err];
+
+
     } failure:^(NSData *data, NSError *error) {
         //TODO
     }];
     
 }
 
+- (TodModel*) getTodData {
+    return attractions;
+}
 
 @end

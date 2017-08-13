@@ -31,6 +31,9 @@
 		CCEAD72F1F3FFA830018404E /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD72E1F3FFA830018404E /* DataManager.m */; };
 		CCEAD7301F3FFA830018404E /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD72E1F3FFA830018404E /* DataManager.m */; };
 		CCEAD7311F3FFA830018404E /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD72E1F3FFA830018404E /* DataManager.m */; };
+		CCEAD7331F4024690018404E /* TodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD7321F4024690018404E /* TodModel.m */; };
+		CCEAD7341F4024690018404E /* TodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD7321F4024690018404E /* TodModel.m */; };
+		CCEAD7351F4024690018404E /* TodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD7321F4024690018404E /* TodModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,7 @@
 		CCEAD7291F3FEFA40018404E /* HttpUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpUrl.m; sourceTree = "<group>"; };
 		CCEAD72D1F3FFA590018404E /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
 		CCEAD72E1F3FFA830018404E /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		CCEAD7321F4024690018404E /* TodModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodModel.m; sourceTree = "<group>"; };
 		D0179C989339EEF284F9B4D0 /* Pods_tod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D614DE96C126B69C270A058E /* Pods-todUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-todUITests/Pods-todUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -211,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				CCEAD7061F3F52B60018404E /* TodModel.h */,
+				CCEAD7321F4024690018404E /* TodModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -531,6 +536,7 @@
 			files = (
 				CCEAD7251F3F62260018404E /* NetworkConstants.m in Sources */,
 				CCEAD6D71F3B566C0018404E /* ViewController.m in Sources */,
+				CCEAD7331F4024690018404E /* TodModel.m in Sources */,
 				CCEAD6D41F3B566C0018404E /* AppDelegate.m in Sources */,
 				CCEAD72A1F3FEFA40018404E /* HttpUrl.m in Sources */,
 				CCEAD6D11F3B566C0018404E /* main.m in Sources */,
@@ -549,6 +555,7 @@
 				CCEAD6ED1F3B566C0018404E /* todTests.m in Sources */,
 				CCEAD70B1F3F5F930018404E /* HttpRequest.m in Sources */,
 				CCEAD72B1F3FEFA40018404E /* HttpUrl.m in Sources */,
+				CCEAD7341F4024690018404E /* TodModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,6 +568,7 @@
 				CCEAD6F81F3B566C0018404E /* todUITests.m in Sources */,
 				CCEAD70C1F3F5F930018404E /* HttpRequest.m in Sources */,
 				CCEAD72C1F3FEFA40018404E /* HttpUrl.m in Sources */,
+				CCEAD7351F4024690018404E /* TodModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

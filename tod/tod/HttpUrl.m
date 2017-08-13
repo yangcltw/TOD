@@ -17,6 +17,8 @@
     [url appendString:protocol];
     [url appendString:@"://"];
     [url appendString:baseUrl];
+    [url appendString:path];
+
 }
 - (void) buildQueryString:(NSDictionary*)map {
     // TODO validate url before build

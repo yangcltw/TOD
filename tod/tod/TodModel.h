@@ -30,11 +30,11 @@
 @property (nonatomic) NSInteger limit;
 @property (nonatomic) NSInteger count;
 @property (nonatomic) NSString *sort;
-@property (nonatomic) NSArray <AttractionsModel> *result;
+@property (nonatomic) NSArray <AttractionsModel> *results;
 @end
 
 @interface TodModel : JSONModel
-@property (nonatomic) NSArray <ResultModel> *result;
+@property (nonatomic)  ResultModel *result;
 @end
 
 #endif /* TodModel_h */
