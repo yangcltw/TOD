@@ -36,6 +36,8 @@
 		CCEAD7351F4024690018404E /* TodModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD7321F4024690018404E /* TodModel.m */; };
 		CCEAD73C1F40539D0018404E /* AttractionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD73B1F40539D0018404E /* AttractionCell.m */; };
 		CCEAD73F1F40A60A0018404E /* default.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CCEAD73E1F40A60A0018404E /* default.JPG */; };
+		CCEAD7411F41F8040018404E /* ParkDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCEAD7401F41F8040018404E /* ParkDetailViewController.storyboard */; };
+		CCEAD7441F41F8BE0018404E /* ParkDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCEAD7431F41F8BE0018404E /* ParkDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +98,9 @@
 		CCEAD73A1F40539D0018404E /* AttractionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttractionCell.h; sourceTree = "<group>"; };
 		CCEAD73B1F40539D0018404E /* AttractionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttractionCell.m; sourceTree = "<group>"; };
 		CCEAD73E1F40A60A0018404E /* default.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = default.JPG; path = ../../../../Users/bart/Downloads/default.JPG; sourceTree = "<group>"; };
+		CCEAD7401F41F8040018404E /* ParkDetailViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ParkDetailViewController.storyboard; sourceTree = "<group>"; };
+		CCEAD7421F41F8BE0018404E /* ParkDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParkDetailViewController.h; sourceTree = "<group>"; };
+		CCEAD7431F41F8BE0018404E /* ParkDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParkDetailViewController.m; sourceTree = "<group>"; };
 		D0179C989339EEF284F9B4D0 /* Pods_tod.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tod.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D614DE96C126B69C270A058E /* Pods-todUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-todUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-todUITests/Pods-todUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +197,9 @@
 				CCEAD6CF1F3B566C0018404E /* Supporting Files */,
 				CCEAD73A1F40539D0018404E /* AttractionCell.h */,
 				CCEAD73B1F40539D0018404E /* AttractionCell.m */,
+				CCEAD7401F41F8040018404E /* ParkDetailViewController.storyboard */,
+				CCEAD7421F41F8BE0018404E /* ParkDetailViewController.h */,
+				CCEAD7431F41F8BE0018404E /* ParkDetailViewController.m */,
 			);
 			path = tod;
 			sourceTree = "<group>";
@@ -380,6 +388,7 @@
 				CCEAD6DF1F3B566C0018404E /* Assets.xcassets in Resources */,
 				CCEAD6DA1F3B566C0018404E /* Main.storyboard in Resources */,
 				CCEAD73F1F40A60A0018404E /* default.JPG in Resources */,
+				CCEAD7411F41F8040018404E /* ParkDetailViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +569,7 @@
 				CCEAD7251F3F62260018404E /* NetworkConstants.m in Sources */,
 				CCEAD6D71F3B566C0018404E /* ViewController.m in Sources */,
 				CCEAD7331F4024690018404E /* TodModel.m in Sources */,
+				CCEAD7441F41F8BE0018404E /* ParkDetailViewController.m in Sources */,
 				CCEAD6D41F3B566C0018404E /* AppDelegate.m in Sources */,
 				CCEAD72A1F3FEFA40018404E /* HttpUrl.m in Sources */,
 				CCEAD6D11F3B566C0018404E /* main.m in Sources */,

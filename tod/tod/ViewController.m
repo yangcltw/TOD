@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ParkDetailViewController.h"
 #import "DataManager.h"
 #import "AttractionCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -22,7 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     DataManager *manager = [DataManager sharedInstance];
     [manager retreiveDataFromServer:^{
-        keys = [[[DataManager sharedInstance] getTodData] allKeys];
+        keys = [[DataManager sharedInstance] getDictionaryKeys];
         [self.tableView reloadData];
     }];
 }
@@ -86,4 +87,10 @@
     cell.parkImageView.image = nil;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    [[DataManager sharedInstance] setSelectedIndex:indexPath];
+    ParkDetailViewController *parkDetail = [ParkDetailViewController storyboardInstance];
+    [self.navigationController pushViewController:parkDetail  animated:true];
+}
 @end
