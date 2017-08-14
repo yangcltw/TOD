@@ -68,14 +68,21 @@
     // Configure the cell...
     if (cell == nil) {
         cell = [[AttractionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    } else {
+        cell.parkImageView.image = nil;
+        cell.parkName.text = @"";
+        cell.name.text = @"";
+        cell.introduction.text = @"";
+
+        
     }
 
     // Display in the table cell
     AttractionsModel *attraction =  [[[DataManager sharedInstance] getTodData] objectForKey:keys[indexPath.section]][indexPath.row];
 
     // TODO : fix bug of imageview
-    //[cell.parkImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
-    //                                        placeholderImage:[UIImage imageNamed:@"default.JPG"]];
+    [cell.parkImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
+                                            placeholderImage:[UIImage imageNamed:@"default.JPG"]];
     cell.parkName.text = attraction.ParkName;
     cell.name.text = attraction.Name;
     cell.introduction.text = attraction.Introduction;
