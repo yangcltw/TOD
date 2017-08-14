@@ -44,7 +44,7 @@ We don't have jira or any other tools for help right now. I'm going to create st
   * TOD-6 create storyboard for this page (consider support device and x1, x2, x3. i18n support) (Closed at 8/14)
   * TOD-7 create custom table cell view (Closed at 8/14 , worked on TOD-6)
   * TOD-8 bind data to table view (Closed at 8/14 , worked on TOD-6)
-  * BUG-1 the image view size is not correct if re-use the cell
+  * BUG-1 the image view size is not correct if re-use the cell (https://github.com/rs/SDWebImage/issues/9)
   
 * Story-2 : As a user, I can see the list of attractions in the park so that I can go to visit the spot in the park after click table cell of attraction list.
   * TOD-9 create new storyboard to display park detail info 
