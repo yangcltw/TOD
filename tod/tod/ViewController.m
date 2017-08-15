@@ -75,8 +75,8 @@
     AttractionsModel *attraction =  [[[DataManager sharedInstance] getTodData] objectForKey:keys[indexPath.section]][indexPath.row];
 
     // TODO : fix bug of imageview
-    //[cell.parkImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
-    //                                        placeholderImage:[UIImage imageNamed:@"default.JPG"]];
+    [cell.parkImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
+                                            placeholderImage:[UIImage imageNamed:@"default.JPG"]];
     cell.parkName.text = attraction.ParkName;
     cell.name.text = attraction.Name;
     cell.introduction.text = attraction.Introduction;

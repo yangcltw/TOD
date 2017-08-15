@@ -34,8 +34,11 @@
     self.attractionName.text = attractions.Name;
     self.openDuration.text = attractions.OpenTime;
     self.introduction.text = attractions.Introduction;
-    [self.introduction sizeToFit];
+    //[self.introduction sizeToFit];
     //[self.srollView sizeToFit];
+    
+    [self.scrollView setContentSize:CGSizeMake(self.contentView.frame.size.width,self.contentView.frame.size.height)];
+
     
 
 }

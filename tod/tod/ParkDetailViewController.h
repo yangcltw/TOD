@@ -3,7 +3,7 @@
 //  tod
 //
 //  Created by Bart Yang on 2017/8/14.
-//  Copyright © 2017年 Bart Yang. All rights reserved.
+//  Copyright © 2017 Bart Yang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,6 +12,8 @@
 @interface ParkDetailViewController : UIViewController {
     AttractionsModel *attractions;
 }
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) IBOutlet UIScrollView *srollView;
 @property (weak, nonatomic) IBOutlet UIImageView *AttractionImageView;
 @property (weak, nonatomic) IBOutlet UILabel *parkName;
