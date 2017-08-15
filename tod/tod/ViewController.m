@@ -69,6 +69,13 @@
     // Configure the cell...
     if (cell == nil) {
         cell = [[AttractionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    } else {
+        cell.parkImageView.image = nil;
+        cell.parkName.text = @"";
+        cell.name.text = @"";
+        cell.introduction.text = @"";
+
+        
     }
 
     // Display in the table cell
