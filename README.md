@@ -44,12 +44,12 @@ We don't have jira or any other tools for help right now. I'm going to create st
   * TOD-6 create storyboard for this page (consider support device and x1, x2, x3. i18n support) (Closed at 8/14)
   * TOD-7 create custom table cell view (Closed at 8/14 , worked on TOD-6)
   * TOD-8 bind data to table view (Closed at 8/14 , worked on TOD-6)
-  * BUG-1 the image view size is not correct if re-use the cell (https://github.com/rs/SDWebImage/issues/9)
+  * BUG-1 the image view size is not correct if re-use the cell (https://github.com/rs/SDWebImage/issues/9)(closed at 8/16)
   
 * Story-2 : As a user, I can see the list of attractions in the park so that I can go to visit the spot in the park after click table cell of attraction list.
-  * TOD-9 create new storyboard to display park detail info 
+  * TOD-9 create new storyboard to display park detail info  (closed at 8/16)
   > We had some storyboard management and merge issue if multiple developer work on UI part. I took this way to avoid this by reference this https://medium.com/ios-os-x-development/xcode-a-better-way-to-deal-with-storyboards-8b6a8b504c06. 
-  * TOD-10 bind data to new storyboard
+  * TOD-10 implement related attraction in detail view. 
 
 # Stories for enhancement
 > query pagenation and lazy loading. debouncy for refresh. data cache. map support (there is geo info in the data, need google api to query) , UI of device support move to enhancement
