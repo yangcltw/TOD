@@ -65,7 +65,6 @@
 {
     static NSString *CellIdentifier = @"Cell";
     AttractionCell *cell = (AttractionCell*) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
     // Configure the cell...
     if (cell == nil) {
         cell = [[AttractionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
@@ -74,16 +73,16 @@
         cell.parkName.text = @"";
         cell.name.text = @"";
         cell.introduction.text = @"";
-
-        
     }
 
     // Display in the table cell
     AttractionsModel *attraction =  [[[DataManager sharedInstance] getTodData] objectForKey:keys[indexPath.section]][indexPath.row];
 
-    // TODO : fix bug of imageview
-    [cell.parkImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
-                                            placeholderImage:[UIImage imageNamed:@"default.JPG"]];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [cell.parkImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
+                              placeholderImage:[UIImage imageNamed:@"default.JPG"]];
+    });
+    
     cell.parkName.text = attraction.ParkName;
     cell.name.text = attraction.Name;
     cell.introduction.text = attraction.Introduction;

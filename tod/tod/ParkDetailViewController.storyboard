@@ -70,6 +70,7 @@
                                             <constraint firstItem="mou-B6-UQr" firstAttribute="top" secondItem="VRw-us-iTM" secondAttribute="bottom" constant="20" id="4HZ-n2-KTa"/>
                                             <constraint firstItem="mou-B6-UQr" firstAttribute="top" secondItem="VRw-us-iTM" secondAttribute="bottom" constant="20" id="58q-YV-NEx"/>
                                             <constraint firstItem="2jL-q2-a58" firstAttribute="leading" secondItem="uEp-TN-D2t" secondAttribute="leading" constant="10" id="CqP-Ah-KwV"/>
+                                            <constraint firstItem="VRw-us-iTM" firstAttribute="width" secondItem="uEp-TN-D2t" secondAttribute="width" id="DcS-Ch-fNL"/>
                                             <constraint firstAttribute="trailing" secondItem="3OX-Vl-ZZG" secondAttribute="trailing" constant="10" id="Kpo-Pj-2mF"/>
                                             <constraint firstItem="ocd-PT-GjC" firstAttribute="top" secondItem="mou-B6-UQr" secondAttribute="bottom" constant="20" id="LPE-dV-aiD"/>
                                             <constraint firstItem="B4R-Ba-6Cb" firstAttribute="leading" secondItem="uEp-TN-D2t" secondAttribute="leading" constant="10" id="Qh7-Bw-qzV"/>
@@ -107,6 +108,7 @@
                             <constraint firstItem="6La-rp-giv" firstAttribute="top" secondItem="oFn-lc-yMW" secondAttribute="bottom" id="BCu-c6-gYO"/>
                             <constraint firstItem="oFn-lc-yMW" firstAttribute="top" secondItem="C4v-9g-858" secondAttribute="top" id="DTD-AC-Z4L"/>
                             <constraint firstItem="oFn-lc-yMW" firstAttribute="leading" secondItem="C4v-9g-858" secondAttribute="leading" id="MuL-7B-6NN"/>
+                            <constraint firstItem="VRw-us-iTM" firstAttribute="width" secondItem="C4v-9g-858" secondAttribute="width" id="QK5-BY-Rtl"/>
                             <constraint firstItem="oFn-lc-yMW" firstAttribute="leading" secondItem="C4v-9g-858" secondAttribute="leading" id="cd9-TM-Qwv"/>
                             <constraint firstItem="6La-rp-giv" firstAttribute="top" secondItem="oFn-lc-yMW" secondAttribute="bottom" id="rKo-MT-V1w"/>
                             <constraint firstItem="oFn-lc-yMW" firstAttribute="top" secondItem="C4v-9g-858" secondAttribute="top" id="waD-WN-DeB"/>

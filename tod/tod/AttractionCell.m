@@ -22,8 +22,7 @@
 }
 - (void)prepareForReuse {
     [super prepareForReuse];
-    NSArray <NSLayoutConstraint*> *constraints = [self.contentView.constraints copy];
-    [self.contentView removeConstraints:constraints];
+
     self.clearsContextBeforeDrawing = YES;
     self.contentView.clearsContextBeforeDrawing = YES;
     self.parkImageView.image = nil;
@@ -33,10 +32,5 @@
     self.introduction.text = @"";
     self.frame = CGRectMake(0, 0, 375, 120);
     self.contentView.frame = CGRectMake(0, 0, 375, 120);
-
-
-    [self.contentView addConstraints:constraints];
-    //[self.parkImageView layoutIfNeeded];
-    //[self layoutIfNeeded];
 }
 @end

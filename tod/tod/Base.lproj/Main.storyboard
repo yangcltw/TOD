@@ -22,7 +22,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="120" id="P2V-WF-Z68" customClass="AttractionCell">
                                 <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="P2V-WF-Z68" id="Fnd-fq-cY0">
+                                <tableViewCellContentView key="contentView" autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" contentMode="center" tableViewCell="P2V-WF-Z68" id="Fnd-fq-cY0">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     <subviews>
@@ -59,13 +59,14 @@
                                         <constraint firstItem="r3W-91-QGu" firstAttribute="leading" secondItem="elb-cS-EBj" secondAttribute="trailing" constant="10" id="HSs-aD-TGb"/>
                                         <constraint firstItem="xga-xM-huw" firstAttribute="leading" secondItem="elb-cS-EBj" secondAttribute="trailing" constant="10" id="Xa7-2v-8wv"/>
                                         <constraint firstItem="r3W-91-QGu" firstAttribute="top" secondItem="Fnd-fq-cY0" secondAttribute="top" id="aj9-4f-ubX"/>
-                                        <constraint firstItem="elb-cS-EBj" firstAttribute="top" secondItem="Fnd-fq-cY0" secondAttribute="top" id="brc-sj-egN"/>
-                                        <constraint firstItem="elb-cS-EBj" firstAttribute="bottom" secondItem="Fnd-fq-cY0" secondAttribute="bottom" id="buW-J6-uhZ"/>
+                                        <constraint firstItem="elb-cS-EBj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Fnd-fq-cY0" secondAttribute="top" priority="500" id="brc-sj-egN"/>
+                                        <constraint firstItem="elb-cS-EBj" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Fnd-fq-cY0" secondAttribute="bottom" priority="500" id="buW-J6-uhZ"/>
                                         <constraint firstItem="6wW-9v-4ve" firstAttribute="top" secondItem="r3W-91-QGu" secondAttribute="bottom" constant="20" id="e1a-l3-kLH"/>
                                         <constraint firstItem="elb-cS-EBj" firstAttribute="leading" secondItem="Fnd-fq-cY0" secondAttribute="leading" constant="5" id="gqs-jT-Xpu"/>
                                         <constraint firstItem="6wW-9v-4ve" firstAttribute="leading" secondItem="elb-cS-EBj" secondAttribute="trailing" constant="10" id="gyd-Dc-UtU"/>
                                         <constraint firstItem="6wW-9v-4ve" firstAttribute="trailing" secondItem="Fnd-fq-cY0" secondAttribute="trailing" constant="-5" id="j6V-gd-Bwq"/>
-                                        <constraint firstItem="xga-xM-huw" firstAttribute="bottom" secondItem="Fnd-fq-cY0" secondAttribute="bottomMargin" constant="-20" id="wl3-Lw-3il"/>
+                                        <constraint firstItem="elb-cS-EBj" firstAttribute="centerY" secondItem="Fnd-fq-cY0" secondAttribute="centerY" id="u2w-RA-KCG"/>
+                                        <constraint firstItem="xga-xM-huw" firstAttribute="bottom" secondItem="Fnd-fq-cY0" secondAttribute="bottomMargin" constant="-10" id="wl3-Lw-3il"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
