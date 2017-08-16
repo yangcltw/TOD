@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ParkDetailViewController.h"
 #import "DataManager.h"
 #import "AttractionCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -22,7 +23,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     DataManager *manager = [DataManager sharedInstance];
     [manager retreiveDataFromServer:^{
-        keys = [[[DataManager sharedInstance] getTodData] allKeys];
+        keys = [[DataManager sharedInstance] getDictionaryKeys];
         [self.tableView reloadData];
     }];
 }
@@ -64,18 +65,24 @@
 {
     static NSString *CellIdentifier = @"Cell";
     AttractionCell *cell = (AttractionCell*) [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
     // Configure the cell...
     if (cell == nil) {
         cell = [[AttractionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    } else {
+        cell.parkImageView.image = nil;
+        cell.parkName.text = @"";
+        cell.name.text = @"";
+        cell.introduction.text = @"";
     }
 
     // Display in the table cell
     AttractionsModel *attraction =  [[[DataManager sharedInstance] getTodData] objectForKey:keys[indexPath.section]][indexPath.row];
 
-    // TODO : fix bug of imageview
-    //[cell.parkImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
-    //                                        placeholderImage:[UIImage imageNamed:@"default.JPG"]];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [cell.parkImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
+                              placeholderImage:[UIImage imageNamed:@"default.JPG"]];
+    });
+    
     cell.parkName.text = attraction.ParkName;
     cell.name.text = attraction.Name;
     cell.introduction.text = attraction.Introduction;
@@ -86,4 +93,10 @@
     cell.parkImageView.image = nil;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    [[DataManager sharedInstance] setSelectedIndex:indexPath];
+    ParkDetailViewController *parkDetail = [ParkDetailViewController storyboardInstance];
+    [self.navigationController pushViewController:parkDetail  animated:true];
+}
 @end

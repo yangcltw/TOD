@@ -67,11 +67,30 @@
             [parks addObject:attraction];
         }
     }
+    dictionaryKeys = [attractionsDic allKeys];
     //NSLog(@"data processing");
     
 }
 - (NSMutableDictionary*) getTodData {
     return attractionsDic;
+}
+- (void) setSelectedIndex:(NSIndexPath*) index {
+    selectedIndex = index;
+}
+
+- (AttractionsModel*) getSelectedAttraction {
+    //TODO check key range and data range
+    if (selectedIndex != nil) {
+        id key = dictionaryKeys[selectedIndex.section];
+        NSMutableArray <AttractionsModel> *array = [attractionsDic objectForKey:key];
+        
+        return array[selectedIndex.row];
+    }
+    return nil;
+}
+
+- (NSArray*) getDictionaryKeys {
+    return dictionaryKeys;
 }
 
 @end
