@@ -92,5 +92,13 @@
 - (NSArray*) getDictionaryKeys {
     return dictionaryKeys;
 }
+- (NSArray*) getRelatedAttractions:(AttractionsModel*) attraction {
+    if (attraction != nil) {
+        NSMutableArray <AttractionsModel> *array = [attractionsDic objectForKey:attraction.ParkName];
+        return array;
+    }
+    return nil;
+}
+
 
 @end

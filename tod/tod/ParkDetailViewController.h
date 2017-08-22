@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "TodModel.h"
 
-@interface ParkDetailViewController : UIViewController {
+@interface ParkDetailViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate> {
     AttractionsModel *attractions;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *attractionName;
 @property (weak, nonatomic) IBOutlet UILabel *openDuration;
 @property (weak, nonatomic) IBOutlet UILabel *introduction;
-@property (weak, nonatomic) IBOutlet UIScrollView *imageScrollview;
+@property (weak, nonatomic) IBOutlet UICollectionView *attractionCollections;
 
 + (ParkDetailViewController*) storyboardInstance;
 
