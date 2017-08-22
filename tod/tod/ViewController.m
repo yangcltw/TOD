@@ -24,7 +24,9 @@
     DataManager *manager = [DataManager sharedInstance];
     [manager retreiveDataFromServer:^{
         keys = [[DataManager sharedInstance] getDictionaryKeys];
-        [self.tableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
     }];
 }
 
@@ -70,18 +72,17 @@
         cell = [[AttractionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     } 
 
+    AttractionsModel *attraction =  [[[DataManager sharedInstance] getTodData] objectForKey:keys[indexPath.section]][indexPath.row];
+    
+    cell.parkName.text = attraction.ParkName;
+    cell.name.text = attraction.Name;
+    cell.introduction.text = attraction.Introduction;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         // Display in the table cell
-        AttractionsModel *attraction =  [[[DataManager sharedInstance] getTodData] objectForKey:keys[indexPath.section]][indexPath.row];
-
         [cell.parkImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
                               placeholderImage:[UIImage imageNamed:@"default.JPG"]];
-        cell.parkName.text = attraction.ParkName;
-        cell.name.text = attraction.Name;
-        cell.introduction.text = attraction.Introduction;
-
-    });
+            });
     
         return cell;
 }
