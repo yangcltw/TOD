@@ -29,19 +29,7 @@
     }
 -(void) viewDidAppear:(BOOL)animated {
     attractions = [[DataManager sharedInstance] getSelectedAttraction];
-    
-    [self.AttractionImageView sd_setImageWithURL:[NSURL URLWithString:attractions.Image]
-                                placeholderImage:[UIImage imageNamed:@"default.JPG"]];
-    self.parkName.text = attractions.ParkName;
-    self.attractionName.text = attractions.Name;
-    self.openDuration.text = attractions.OpenTime;
-    self.introduction.text = attractions.Introduction;
-    //[self.introduction sizeToFit];
-    //[self.srollView sizeToFit];
-    [self.attractionCollections reloadData];
-    [self.scrollView setContentSize:CGSizeMake(self.contentView.frame.size.width,self.contentView.frame.size.height)];
-    
-
+    [self loadData:attractions];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -87,7 +75,26 @@
 {
     //NSString *selected = [self.tracks objectAtIndex:indexPath.row];
     //NSLog(@"selected=%@", selected);
+    AttractionsModel *attraction = [[[DataManager sharedInstance] getRelatedAttractions:attractions] objectAtIndex:indexPath.row];
+    [self loadData:attraction];
 }
 
+#pragma UIReload
+- (void) loadData:(AttractionsModel*) attraction {
+    
+    [self.AttractionImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
+                                placeholderImage:[UIImage imageNamed:@"default.JPG"]];
+    self.parkName.text = attraction.ParkName;
+    self.attractionName.text = attraction.Name;
+    self.openDuration.text = attraction.OpenTime;
+    self.introduction.text = attraction.Introduction;
+    [self.introduction setFrame:CGRectMake(self.introduction.frame.origin.x, self.introduction.frame.origin.y, self.view.frame.size.width - 20 , self.introduction.frame.size.height)];
+    [self.introduction sizeToFit];
+    [self.attractionCollections setFrame:CGRectMake(self.attractionCollections.frame.origin.x, self.introduction.frame.origin.y + self.introduction.frame.size.height + 15, self.attractionCollections.frame.size.width, self.attractionCollections.frame.size.height)];
+    
+    [self.attractionCollections reloadData];
+    [self.scrollView setContentSize:CGSizeMake(self.contentView.frame.size.width,self.contentView.frame.size.height)];
+
+}
 
 @end
