@@ -23,5 +23,6 @@
 - (void) setSelectedIndex:(NSIndexPath*) index;
 - (AttractionsModel*) getSelectedAttraction;
 - (NSArray*) getDictionaryKeys;
+- (NSArray*) getRelatedAttractions:(AttractionsModel*) attraction;
 @end
 #endif /* DataManager_h */

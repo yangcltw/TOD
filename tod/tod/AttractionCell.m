@@ -26,11 +26,11 @@
     self.clearsContextBeforeDrawing = YES;
     self.contentView.clearsContextBeforeDrawing = YES;
     self.parkImageView.image = nil;
-    self.parkImageView.frame = CGRectMake(0, 0, 120, 120);
+    //self.parkImageView.frame = CGRectMake(0, 0, 120, 120);
     self.parkName.text = @"";
     self.name.text =@"";
     self.introduction.text = @"";
-    self.frame = CGRectMake(0, 0, 375, 120);
-    self.contentView.frame = CGRectMake(0, 0, 375, 120);
+    //self.frame = CGRectMake(0, 0, 375, 120);
+    //self.contentView.frame = CGRectMake(0, 0, 375, 120);
 }
 @end

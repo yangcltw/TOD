@@ -24,7 +24,9 @@
     DataManager *manager = [DataManager sharedInstance];
     [manager retreiveDataFromServer:^{
         keys = [[DataManager sharedInstance] getDictionaryKeys];
-        [self.tableView reloadData];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
     }];
 }
 
@@ -68,25 +70,21 @@
     // Configure the cell...
     if (cell == nil) {
         cell = [[AttractionCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    } else {
-        cell.parkImageView.image = nil;
-        cell.parkName.text = @"";
-        cell.name.text = @"";
-        cell.introduction.text = @"";
-    }
+    } 
 
-    // Display in the table cell
     AttractionsModel *attraction =  [[[DataManager sharedInstance] getTodData] objectForKey:keys[indexPath.section]][indexPath.row];
-
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [cell.parkImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
-                              placeholderImage:[UIImage imageNamed:@"default.JPG"]];
-    });
     
     cell.parkName.text = attraction.ParkName;
     cell.name.text = attraction.Name;
     cell.introduction.text = attraction.Introduction;
-    return cell;
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        // Display in the table cell
+        [cell.parkImageView sd_setImageWithURL:[NSURL URLWithString:attraction.Image]
+                              placeholderImage:[UIImage imageNamed:@"default.JPG"]];
+            });
+    
+        return cell;
 }
 
 -(void) tableView:(UITableView *)tableView didEndDisplayingCell:(AttractionCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
