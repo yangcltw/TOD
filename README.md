@@ -49,7 +49,7 @@ We don't have jira or any other tools for help right now. I'm going to create st
 * Story-2 : As a user, I can see the list of attractions in the park so that I can go to visit the spot in the park after click table cell of attraction list.
   * TOD-9 create new storyboard to display park detail info  (closed at 8/16)
   > We had some storyboard management and merge issue if multiple developer work on UI part. I took this way to avoid this by reference this https://medium.com/ios-os-x-development/xcode-a-better-way-to-deal-with-storyboards-8b6a8b504c06. 
-  * TOD-10 implement related attraction in detail view. 
+  * TOD-10 implement related attraction in detail view. (closed at 8/28)
 
 # Stories for enhancement
 > query pagenation and lazy loading. debouncy for refresh. data cache. map support (there is geo info in the data, need google api to query) , UI of device support move to enhancement
